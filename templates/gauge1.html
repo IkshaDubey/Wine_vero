@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Gauge</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- <link rel="stylesheet" href="../static/style.css"> -->
+</head>
+<body>
+    <div class="gauge">
+        <div class="progress"> <!--gauge__body-->
+            <div class="bar"></div> <!--gauge__fill-->
+            <div class="needle"></div> <!--gauge__cover-->
+        </div>
+    </div>
+    <div class="result-block">
+        <h2>Quality Prediction</h2>
+        <p class="number">{{ quality }}</p> <!-- Display the predicted quality -->
+    </div>
+    <div class="msg">
+        <p class="process">Verification process</p>
+        <p class="success">Successfully done!</p>
+    </div>
+<script>
+    // const process_txt=document.querySelector('.process');
+    // const success_txt=document.querySelector('.success');
+    // setTimeout(()=>{
+    //     process_txt.classList.add('active');
+    // },0)
+    // setTimeout(toggleMsg,1600);
+    // // 80% of 2sec=1.6s=1600ms
+    // function toggleMsg(){
+    //     process_txt.classList.remove('active');
+    //     success_txt.classList.add('active');
+    
+
+    // }
+    
+    const gaugeElement = document.querySelector(".gauge");
+    const qualityElement = document.querySelector('.number');
+    const quality = parseInt(qualityElement.textContent, 10);
+    const new_quality=quality/10;
+    function setGaugeValue(gauge, quality) {
+        if (qualityElement < 0 || quality > 10) {
+            return;
+        }
+        gauge.querySelector(".bar").style.transform = `rotate(${quality/ 2}turn)`;
+        // const needle = gauge.querySelector(".bar");  // Get the needle element
+        // const rotationAngle = (quality * 180) - 90;  // Convert value (0-1) to degrees (-90 to 90)
+        // bar.style.transform = `rotate(${rotationAngle}deg)`;  // Rotate the needle
+       
+    }
+    setGaugeValue(gaugeElement, new_quality );
+    
+
+      
+</script>
+    
+</body>
+</html>-->
+    

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Playfair+Display:wght@400;700&display=swap');
+
+body.gradient-background {
+    background: linear-gradient(to right, #3e362b, #dc791d); /* Soft gradient from deep to bright red */
+    font-family: 'Montserrat', sans-serif; /* Clean sans-serif font */
+    color: #f5f5f5; /* Light gray text color */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex; /* Flex layout for side-by-side blocks */
+    height: 100vh; /* Full viewport height */
+    padding: 20px; /* Consistent padding */
+}
+
+.left-block {
+    flex: 1; /* Take half the container */
+    padding: 20px;
+    border-radius: 20px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    transition: transform 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.left-block:hover {
+    transform: scale(1.05); /* Subtle scaling on hover */
+}
+
+.right-block {
+    flex: 1; /* Take half the container */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    border-radius: 20px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.2); /* Slightly less transparent */
+}
+
+.right-block video {
+    width: 550px;
+    height: 600px; /* Slightly smaller to create space */
+    border-radius: 20px; /* Rounded corners */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+h1 {
+    font-family: 'Playfair Display', serif; /* Serif font for headings */
+    text-align: center; 
+    color: #ffffff; /* Deep red wine color */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 10px; /* Spacing between inputs */
+}
+
+input {
+    padding: 6px; /* Consistent padding */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 13px; /* Standard font size */
+    background-color: #f5f5f5; /* Light gray background */
+}
+
+button {
+    padding: 12px; /* Consistent padding */
+    background: #d42027; /* Bright wine red */
+    color: white; /* White text for contrast */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px; /* Larger font size */
+    transition: background 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background: #a11e23; /* Darker red on hover */
+}
+
+.prediction-text {
+    font-size: 16px; /* Consistent font size */
+    color: #333; /* Dark gray for contrast */
+    text-align: center; /* Centered text */
+    margin-top: 20px; /* Space above */
+}
+
+@media screen and (max-width: 789px) {
+    .container {
+        display: flex; /* Keep flex layout */
+        flex-direction: row; /* Keep horizontal alignment */
+    }
+
+    .right-block {
+        
+        width: 50%; /* Ensure right-block takes equal space */
+    }
+    .left-block{
+        flex: 1;
+        width:50%
+        box-sizing: border-box;
+    }
+    .form{
+        gap: 2px
+    }
+    .right-block video {
+        width:70%;
+        border-radius: 20px; /* Rounded corners */
+        object-fit: cover; /* Maintain aspect ratio */
+    }
+    input {
+        padding: 5px; /* Consistent padding */
+        border: 1px solid #ccc; /* Light border */
+        border-radius: 10px; /* Rounded corners */
+        font-size: 12px; /* Standard font size */
+        background-color: #f5f5f5; /* Light gray background */
+    }
+    
+}

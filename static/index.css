@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;display=swap');
+ 
+:root{
+    --overlay-color:#920012;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-image {
+    display:flex;
+    align-items: center;
+    justify-content: flex-end; /* Push the image to the far right */
+}
+
+.header-image p {
+    margin-right: 10px;  /* Space between text and image */
+    font-size: 1em;  /* Adjust font size */
+    color: #fff;  /* Text color (assuming a dark background) */
+}
+.header-image img {
+    width: 50px;  /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    object-fit: cover; /* Ensure the image scales without distortion */
+    cursor: pointer;  /* Optional, makes the image interactive */
+}
+
+
+
+.showcase {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Corrected spelling */
+    background: #111; /* Fixed syntax error */
+    color: #fff; /* Ensures text is white */
+    z-index: 2; 
+    transition: 0.5s;/* Changed to 'z-index' */
+}
+.showcase.active{
+    right: 200px;
+}
+.showcase header {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 25%;
+
+}
+
+.logo {
+    text-transform: uppercase;
+    
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start; 
+
+}
+.logo img{
+    width: 140px;  /* Adjust as needed */
+    height: 140px; /* Adjust as needed */
+    object-fit: cover; /* Ensure the image scales without distortion */
+    cursor: pointer;
+
+}
+.logo h2{
+    margin-left: 10px;  /* Space between text and image */  /* Adjust font size */
+    color: #fff; 
+
+}
+
+.toggle {
+    position: absolute;
+    top:10px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: url('/static/Images/menu.png')  no-repeat center/30px; /* Condensed */
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: url('/static/Images/cancel.png') no-repeat center/30px; /* Condensed */
+}
+
+.menu {
+    position: absolute;
+    top:0;
+    right:0;
+    width:200px;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* Placeholder for future styling if needed */
+}
+.menu ul{
+    position: relative ;
+    list-style-type:none;
+
+}
+.menu ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color:#111;
+
+
+}
+.menu ul li a:hover{
+    
+    color:var(--overlay-color);
+    
+
+}
+
+.bg-video {
+    position: absolute;  /* Place video behind other content */
+    top: 0;              /* Align to the top of the section */
+    left: 0;             /* Align to the left of the section */
+    width: 100%;         /* Cover the full width */
+    height: 100%;        /* Cover the full height */
+    object-fit: cover;   /* Ensure the video covers the entire area without distortion */
+    z-index: -1;         /* Send the video to the back layer */
+    opacity: 0.9;          /* Full opacity for the video */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Ensures text readability on top of video */
+}
+
+.text {
+    position: relative;
+    z-index: 10; /* Position above video and overlay */
+    color: #fff; /* Ensures text color is white */
+}
+
+.text h2{
+    font-size: 3em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+.text h3{
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+.text p{
+    font-size: 1em;
+    margin: 20px 0;
+    font-weight: 500;
+    max-width: 700px;
+}
+.text a{
+    display: inline-block;
+    font-size: 1em;
+    padding: 10px 30px;
+    background: #fff;
+    text-decoration: none;
+    color:#111;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.2s;
+
+
+}
+.text.active a{
+    display: inline-block;
+    font-size: 1em;
+    padding: 10px 30px;
+    background: #fff;
+    text-decoration: none;
+    color:#111;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.2s;
+    
+
+}
+.text a:hover{
+    letter-spacing: 6px;
+
+}
+.social {
+    position: fixed;  /* Make the social icons fixed */
+    bottom: 10px;     /* Align at the bottom with a small margin */
+    right: 10px;      /* Align to the right with a small margin */
+    z-index: 20;      /* Ensure social icons are above other content */
+    display: flex;    /* Use flex to arrange icons */
+    justify-content: center; 
+    align-items: center;/* Distribute space evenly among icons */
+}
+
+.social li {
+    margin: -100px;  /* Add margin between icons for better spacing */
+}
+
+.social li a {
+    display: inline-block;
+    transition: 0.5s;
+    transform: scale(0.1); /* Default icon size */
+    filter: invert(1);     /* Invert colors to make them visible on dark background */
+}
+
+.social li a:hover {
+    transform: scale(0.2) translateY(-10px); /* Enlarge on hover and add slight vertical offset */
+}
+
+@media(max-width: 798px){
+    .showcase,
+    .showcase header{
+        padding: 40px;
+    }
+    .text h2{
+        font-size:3em ;
+
+    }
+    .text h3{
+        font-size: 2em;
+    }
+
+}

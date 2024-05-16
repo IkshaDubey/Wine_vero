@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..\static\home2.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="..\static\Images\verolt_logo-removebg-preview.png" alt="Logo">
+        </div>
+        <div class="app-name">
+            Verolt Sommelier
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="carousel">
+            <div class="left-block">
+                <form action="{{ url_for('predict') }}" method="post">
+                    <div class="mb-3">
+                        <label for="fixed_acidity" class="fixed_acidity_formlabel">Fixed Acidity:To determine the fixed acidity of wine, you typically use a method called titration.</label>
+                        <input type="text" name="fixed_acidity" id="fixed_acidity" placeholder="Fixed Acidity" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="volatile_acidity" class="volatile_acidity_formlabel">Volatile Acidity: Gas chromatography is a more sophisticated technique that separates and quantifies individual volatile compounds present in the wine.</label>
+                        <input type="text" name="volatile_acidity" id="volatile_acidity" placeholder="Volatile Acidity"required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="citric_acid" class="citric_acid_formlabel">Citric Acid: standardized sodium hydroxide (NaOH) solution as the titrant, and an appropriate indicator.</label>
+                        <input type="text" name="citric_acid" id="citric_acid" placeholder="Citric Acid" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="residual_sugar" class="residual_sugar_formlabel">Residual Sugar: Chromatographic methods like high-performance liquid chromatography (HPLC) can also be used to measure residual sugar in wine. </label>
+                        <input type="text" name="residual_sugar" id="residual_sugar" placeholder="Residual Sugar" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="chlorides" class="chlorides_formlabel">Chlorides:Can be determined a simple titration method using a silver nitrate (AgNO3) solution as the titrant</label>
+                        <input type="text" name="chlorides" id="chlorides" placeholder="Chlorides" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="free_sulphur_dioxide" class="free_sulphur_dioxide">Free Sulphur Dioxide:Determining free sulfur dioxide (SO2) in wine typically involves a method called the Ripper titration.</label>
+                        <input type="text" name="free_sulphur_dioxide" id="free_sulphur_dioxide" placeholder="Free Sulphur Dioxide" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="total_sulphur_dioxide" class="total_sulphur_dioxide">Total Sulphur Dioxide: The total SO2 content is commonly determined by the Ripper titration method for free SO2 and then by subtracting the free SO2 from the total SO2 content.</label>
+                        <input type="text" name="total_sulphur_dioxide" id="total_sulphur_dioxide" placeholder="Total Sulphur Dioxide" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="density" class="density_formlabel">Density: Use a hydrometer or a densitometer.</label>
+                        <input type="text" name="density" id="density" placeholder="Density" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pH" class="pH_formlabel">pH: Determining the pH of wine involves using a pH meter or pH indicator strips</label>
+                        <input type="text" name="pH" id="pH" placeholder="pH" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sulphates" class="sulphates_formlabel">Sulphates: Use Ripper titration.</label>
+                        <input type="text" name="sulphates" id="sulphates" placeholder="Sulphates" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="alcohol" class="alcohol_formlabel">Alcohol: On the back of bottle </label>
+                        <input type="text" name="alcohol" id="alcohol" placeholder="Sulphates" required>
+                    </div>
+                    <!-- Other input fields go here -->
+                    <button type="submit">Predict</button>
+                </form>
+        </div>
+        
+        </div>
+        <div class="right-block">
+            <video controls>
+                <source src="your-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <button id="nextBtn">Next</button>
+
+    <script src="../static/carousel_home2.js"></script>
+</body>
+</html>
+
+
+

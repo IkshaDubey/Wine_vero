@@ -1,0 +1,16 @@
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .input-row i {
+    margin-right: 10px;
+  }
+  

@@ -1,0 +1,44 @@
+@keyframes fadeIn {
+    0% {
+        background-color: rgba(0, 0, 0, 0); /* Fully transparent */
+    }
+    100% {
+        background-color: {{ color }}; /* Final background color from Flask variable */
+    }
+}
+body {
+    font-family: 'Playfair Display', serif;/* Light background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    animation: fadeIn 5s;
+}
+
+.results-container {
+    display: flex; /* Flex layout for side-by-side blocks */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: center; /* Center content horizontally */
+    gap: 50px; /* Space between blocks */
+}
+
+h1, h2 {
+    color: #8a2b3f; /* Deep wine red */
+}
+
+.result-block {
+    background-color: white; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding around the block */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 300px; /* Fixed width */
+    text-align: center; /* Center content */
+}
+
+.number {
+    font-family: 'Roboto Mono', monospace; /* Monospace font for numbers */
+    font-size: 2.5rem; /* Larger font size */
+    color: #8a2b3f; /* Deep wine red */
+}

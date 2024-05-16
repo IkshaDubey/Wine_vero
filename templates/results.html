@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Always include charset for proper encoding -->
+    <title>Verolt Sommelier Results</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Playfair+Display&display=swap" rel="stylesheet">
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='results.css') }}">
+</head>
+<body style="background-color: {{ color }};"> <!-- Dynamic background color -->
+    <div class="results-container">
+        <!-- Result block for quality prediction -->
+        <div class="result-block">
+            <h2>Quality Prediction</h2>
+            <p class="number">{{ quality }}</p> <!-- Display the predicted quality -->
+        </div>
+
+        <!-- Result block for color prediction -->
+
+        <!-- Result block for taste prediction -->
+        <div class="result-block">
+            <h2>Taste Prediction</h2>
+            <p class="number">{{ taste }}</p> <!-- Display the predicted taste -->
+        </div>
+    </div>
+</body>
+</html>

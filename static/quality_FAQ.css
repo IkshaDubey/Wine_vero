@@ -1,0 +1,463 @@
+/* Global styles for the entire page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans', sans-serif;
+    color: #333; /* Dark text for readability */
+    background-image: url('../static/Images/Logo_Trans.png'); /* Background image path */
+    background-size: 70%;
+    background-position: center; /* Center the image */
+     /* Adjust to fit within the viewport */
+    background-repeat: no-repeat; /* Avoid repeating the image */
+}
+
+/* Header styling */
+.header {
+    position: fixed; /* Fixed at the top */
+    top: 0; /* Align at the top edge of the viewport */
+    left: 0; /* Align to the left edge */
+    right: 0; /* Align to the right edge */
+    background: linear-gradient(to right, #036a59, #ad2626);
+    color: white;
+    text-align: center;
+    padding: 10px; /* Adjust padding for smaller size */
+    font-size: 1em; /* Smaller font size for compact header */
+    z-index: 10; /* Ensure it stays above other elements */
+}
+.intro{
+    position: relative; /* Fixed at the top */
+    top: 100px; /* Align at the top edge of the viewport */
+    left: 10px; /* Align to the left edge */
+    right: 10px;
+    text-align: center;
+   
+    margin-bottom: 200px;
+
+}
+@media (max-width: 789px) {
+    .intro{
+        position: absolute; /* Fixed at the top */
+        top: 100px; /* Align at the top edge of the viewport */
+        left: 10px; /* Align to the left edge */
+        right: 10px;
+
+    }
+
+}
+@media (max-width: 500px) {
+    .intro{
+        position: absolute; /* Fixed at the top */
+        top: 170px; /* Align at the top edge of the viewport */
+        left: 10px; /* Align to the left edge */
+        right: 10px;
+
+    }
+
+}
+/* Main content area */
+
+
+.content {
+    display: flex;  /* Arrange sections horizontally */
+    
+    justify-content: left;  /* Distribute sections evenly */
+    flex-wrap: wrap; /* Wrap for smaller screens */
+    /* padding-top: 150px;
+    padding-left: 100px;
+    padding-bottom: 100px; */
+    margin-right: 10px;
+
+    margin-left: 60px;
+     /* Overall padding for content */
+    gap: 10px;  /* Space between sections */
+}
+
+.Video_container{
+    display: flex;  /* Arrange sections horizontally */
+    margin-left: 10px;
+    /* justify-content: left;  Distribute sections evenly */
+    /* flex-wrap: wrap; Wrap for smaller screens */
+    margin-top: 100px;
+    /* padding-top: 150px; */
+    /* padding-left: 10px;
+    padding-bottom: 100px; */
+}
+/* Position video on the right */
+.Video_container iframe {
+
+
+    position: flex;
+    background-color: white;
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Consistent padding */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    transition: transform 0.3s; /* Smooth hover transition */
+     /* Center horizontally with top/bottom margin :margin: 10px auto;*/
+   
+    margin-left: 1000px;
+    margin-right: 10px;
+    margin-top: 30px; /* Space for header and some padding */
+    
+    
+    /* Default size */
+    width: auto;
+    height: auto;
+    
+    /* Optional constraints */
+    /* max-width: 1800px;
+    min-width: 1000px;
+    max-height: 200px;
+    min-height: 200px;
+     */
+    
+   
+   
+}
+
+
+/* Styles for the grape-variety element */
+.grape-variety {
+    background-color: white;
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Consistent padding */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    transition: transform 0.3s; /* Smooth hover transition */
+    margin-right: auto;
+    margin-left: 10px;
+
+    /* Ensure it's below the fixed header */
+    margin-top: 20px; /* Space for header and some padding */
+    width: 300px; /* Default width */
+    height: 150px; /* Default height */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 789px) {
+    .grape-variety {
+        width: 300px;
+        height: 120px;
+        margin-top: 150px; /* Keep it below the header */
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4); /* Reduced shadow */
+        border-radius: 8px; /* Slightly smaller corners */
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 500px) {
+    .grape-variety {
+        width: 150px;
+        height: 100px;
+        margin-top: 70px; /* Maintain space below the header */
+        box-shadow: none; /* No shadow for simplicity */
+        border-radius: 5px; /* Smaller corners */
+    }
+}
+
+
+
+/* Responsive layout adjustment */
+@media (max-width: 789px) {
+    /* Ensure the layout remains centered */
+    .grape-variety{
+        margin: 5px auto; /* Smaller margin */
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 500px) {
+    /* For very small screens, ensure adaptability */
+    .grape-variety {
+        text-align: center; /* Ensures text remains centered */
+        padding: 5px; /* Reduced padding */
+    }
+}
+
+
+
+/*For terroir*/
+.terroir {
+    background-color: white;
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Consistent padding */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    transition: transform 0.3s; /* Smooth hover transition */
+    margin: 10px auto; /* Center horizontally with top/bottom margin */
+    text-align: center; /* Center text */
+    margin-right: auto;
+    margin-left: auto;
+
+    /* Ensure it's below the fixed header */
+    margin-top: 20px; /* Space for header and some padding */
+    width: 300px; /* Default width */
+    height: 150px; 
+    
+   
+    
+    /* Optional constraints */
+    max-width: 400px;
+    min-width: 200px;
+    max-height: 200px;
+    min-height: 100px;
+}
+
+.horizontal-grid{
+    display: grid; /* Enables grid layout */
+    grid-template-columns: repeat(4, 1fr); /* Three equal-width columns */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+    justify-items: center; /* Center-align grid items horizontally */
+    align-items: center; /* Center-align grid items vertically */
+    
+}
+/* Adjusting size for smaller screens (tablets and larger phones) */
+@media (max-width: 600px) {
+    .terroir {
+        width: 300px; /* Smaller width for smaller screens */
+        height: 150px; /* Smaller height */
+        padding: 8px; /* Adjusted padding */
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4); /* Reduced box-shadow */
+        border-radius: 8px; /* Slightly smaller corners */
+        margin-top: 20px; /* Space for header and some padding */
+        
+    }
+}
+
+/* Adjusting size for very small screens (mobile) */
+@media (max-width: 400px) {
+    .terroir {
+        width: 150px; /* Further reduced width */
+        height: 90px; /* Further reduced height */
+        padding: 6px; /* Less padding */
+        box-shadow: none; /* Removing box-shadow for simplicity */
+        border-radius: 5px; /* Smaller border-radius */
+    }
+}
+
+/* Responsive layout adjustment */
+@media (max-width: 600px) {
+    /* Ensure the layout remains centered */
+    .terroir {
+        margin: 5px auto; /* Smaller margin */
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 400px) {
+    /* For very small screens, ensure adaptability */
+    .terroir {
+        text-align: center; /* Ensures text remains centered */
+        padding: 5px; /* Reduced padding */
+    }
+}
+
+
+
+
+
+/*For climate*/
+.climate {
+    background-color: white;
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Consistent padding */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    transition: transform 0.3s; /* Smooth hover transition */
+     /* Center horizontally with top/bottom margin :margin: 10px auto;*/
+    text-align: center; /* Center text */
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px; /* Space for header and some padding */
+    /* Default size */
+    width: 300px;
+    height: 150px;
+    
+    /* Optional constraints */
+    max-width: 400px;
+    min-width: 200px;
+    max-height: 200px;
+    min-height: 100px;
+}
+
+/* Adjusting size for smaller screens (tablets and larger phones) */
+@media (max-width: 600px) {
+    .climate {
+        width: 300px; /* Smaller width for smaller screens */
+        height: 120px; /* Smaller height */
+        padding: 8px; /* Adjusted padding */
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4); /* Reduced box-shadow */
+        border-radius: 8px; /* Slightly smaller corners */
+    }
+}
+
+/* Adjusting size for very small screens (mobile) */
+@media (max-width: 400px) {
+    .climate {
+        width: 150px; /* Further reduced width */
+        height: 100px; /* Further reduced height */
+        padding: 6px; /* Less padding */
+        box-shadow: none; /* Removing box-shadow for simplicity */
+        border-radius: 5px; /* Smaller border-radius */
+    }
+}
+
+/* Responsive layout adjustment */
+@media (max-width: 600px) {
+    /* Ensure the layout remains centered */
+    .climate {
+        margin: 5px auto; /* Smaller margin */
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 400px) {
+    /* For very small screens, ensure adaptability */
+    .climate {
+        text-align: center; /* Ensures text remains centered */
+        padding: 5px; /* Reduced padding */
+    }
+}
+
+
+
+
+/* Section for FAQ */
+
+.faq {
+    position: flex;
+    background-color: white;
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Consistent padding */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    transition: transform 0.3s; /* Smooth hover transition */
+     /* Center horizontally with top/bottom margin :margin: 10px auto;*/
+    text-align: left; /* Left text */
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px; /* Space for header and some padding */
+    
+    
+    /* Default size */
+    width: 1800px;
+    height: 200px;
+    
+    /* Optional constraints */
+    max-width: 1800px;
+    min-width: 1000px;
+    max-height: 200px;
+    min-height: 200px;
+}
+
+/* Adjusting size for smaller screens (tablets and larger phones) */
+@media (max-width: 600px) {
+    .faq {
+        width: 200px; /* Smaller width for smaller screens */
+        height: 120px; /* Smaller height */
+        padding: 8px; /* Adjusted padding */
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4); /* Reduced box-shadow */
+        border-radius: 8px; /* Slightly smaller corners */
+        
+    }
+}
+
+/* Adjusting size for very small screens (mobile) */
+@media (max-width: 400px) {
+    .faq {
+        width: 150px; /* Further reduced width */
+        height: 100px; /* Further reduced height */
+        padding: 6px; /* Less padding */
+        box-shadow: none; /* Removing box-shadow for simplicity */
+        border-radius: 5px; /* Smaller border-radius */
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+/* Responsive layout adjustment */
+@media (max-width: 600px) {
+    /* Ensure the layout remains centered */
+    .faq {
+        margin: 5px auto; /* Smaller margin */
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 400px) {
+    /* For very small screens, ensure adaptability */
+    .faq {
+        text-align: center; /* Ensures text remains centered */
+        padding: 5px; /* Reduced padding */
+        
+    }
+}
+
+
+
+/* Footer styling */
+.footer {
+    position: fixed; /* Keep footer fixed at the bottom */
+    bottom: 0; /* Align to the bottom edge */
+    left: 0; /* Align to the left edge */
+    right: 0; /* Align to the right edge */
+    background: linear-gradient(to right, #036a59, #ad2626);
+    color: white;
+    text-align: center;
+    padding: 10px; /* Padding within the footer */
+     /* Ensure it stays above other elements */
+}
+
+
+/* Styles for each grid item */
+
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .content {
+        flex-direction: column; /* Stack sections vertically */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .content section {
+        margin-bottom: 10px; /* Spacing between sections when stacked */
+    }
+
+    .Video_container iframe {
+        width: 70%; /* Full width on smaller screens */
+        height: auto; /* Auto-adjust height */
+        position: absolute;
+        left: 5px;
+        top: 10px;
+        /* Move iframe to the top on smaller screens */
+    }
+}
+
+/* ############################################################# */
+.horizontal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjusted to 2 columns */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+    justify-items: start; /* Ensure items are left-aligned */
+    align-items: start; /* Ensure items are top-aligned */
+}
+
+/* Adjust the alignment of the video container */
+.Video_container {
+    justify-self: center; /* Center the video container in its grid cell */
+    align-self: center; /* Align vertically */
+}
+
+/* General responsive adjustment for smaller screens */
+@media (max-width: 600px) {
+    .horizontal-grid {
+        grid-template-columns: repeat(1, 1fr); /* Single column layout */
+    }
+    .Video_container iframe {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+	

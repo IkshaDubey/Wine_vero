@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>Verolt Wine Sommelier</title>
+</head>
+<body>
+    <section class ="showcase ">
+        <header>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='Images/verolt_logo-removebg-preview.png') }}" alt="Top Left Image">
+                <h2> Verolt Sommelier</h2>
+            </div>
+
+            <div class="toggle"></div>
+            <!-- <div class="header-image"> Adding a container for the image -->
+                <!-- <p>A Verolt Product</p>
+                <img src="{{ url_for('static', filename='Images/verolt_logo-removebg-preview.png') }}" alt="Top Right Image"> -->
+                <!--img src="..\Images\verolt_logo-removebg-preview.png" alt="Top Right Image"-->
+                 <!-- Adjust the path and alt text -->
+            <!-- </div> -->
+        </header>
+        
+        <video class="bg-video" src="{{ url_for('static', filename='Video/7102287-hd_1920_1080_30fps.mp4') }}" muted loop autoplay></video>
+        <div class="overlay"></div>
+        <div class="text">
+            <h2>The Wine Genius: Uncork Quality</h2>
+            <h3>Your Wine,Our Expertise!</h3>
+            <p>Welcome to Sommelier, where we transform wine tasting with data-driven insights! With just a few simple inputs, we predict your red wine's color, quality, and taste. Our algorithms help you find the perfect bottle every time. Discover, sip, and enjoy. Let Wine Genius elevate your wine experience!</p>
+            <a href="{{ url_for('home') }}">Get Started! Its free!</a>
+            <a href="#">Explore!</a>
+        </div>
+        <ul class="social">
+            <li><a href="https://www.verolt.com/"><img src="{{ url_for('static', filename='Images/twitter.png') }}" alt="Twitter"></a></li>
+            <li><a href="https://www.verolt.com/"><img src="{{ url_for('static', filename='Images/Facebook.jpg') }}"  alt="Facebook"></a></li>
+            <li><a href="https://www.verolt.com/"><img src="{{ url_for('static', filename='Images/Instagram.jpg') }}" alt="Instagram"></a></li>
+        </ul>
+    </section>
+    <div class ="menu">
+        <ul>
+            
+            <li><a href="{{ url_for('drinker')}}#HomeSection" onclick="scrollToHome()">Home</a></li>
+            <li><a href="{{ url_for('drinker') }}#HowitworksSection" onclick="scrollToHowitworks()">How It Works</a></li>
+            <li><a href="{{ url_for('drinker') }}#ContactSection" onclick="scrollToContact()">About Us</a></li>
+            <li><a href="{{ url_for('drinker') }}#ContactSection" onclick="scrollToContact()">Contact us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+    </div>
+
+
+
+    <script>
+        const menutoggle=document.querySelector('.toggle')
+        const showcase=document.querySelector('.showcase')
+        const menutoggle2=document.querySelector('.text')
+        const getstarted=document.querySelector('.text')
+        menutoggle.addEventListener('click',()=>{
+            menutoggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+
+        })
+        menutoggle2.addEventListener('click',()=>{
+            menutoggle2.classList.toggle('active')
+            showcase.classList.toggle('active')
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='gauge.css') }}">
+</head>
+<header class="header">
+    <img class="sider"  src="../static/images1/midil.png" alt="Top right Image">
+    <div class="logo">
+        <img class="verolt" src="../static/Images/verolt_logo-removebg-preview.png" alt="Top Left Image">
+        <h1>VEROLT SOMMELIER</h1>
+
+    </div>
+    
+</header>
+<body>
+
+    
+
+    <!-- <img class="trans-logo" src="{{ url_for('static', filename='Images/Logo_Trans.png') }}" alt="logo"> -->
+    <video class="bg-video" src="{{ url_for('static', filename='Video/5658772-uhd_4096_2160_30fps.mp4') }}" muted loop autoplay></video>
+    <!-- Display form data in a table -->
+    <div class="container">  <!-- This is the parent container for absolute positioning -->
+        <!-- Table positioned at the bottom -->
+        <table class="table">  <!-- Apply the .table class -->
+            <tr>
+                <th>Feature</th>
+                <th>Value</th>
+            </tr>
+            {% for key, value in form_data.items() %}
+            <tr>
+                <td>{{ key }}</td>
+                <td>{{ value }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    
+  
+        <!-- Glass with Fill -->
+    <div class="glass-wrapper">
+        <h2>Color predicton</h2>
+        <img class="glass" src="{{ url_for('static', filename='Images/glass_empty-removebg-preview.png') }}" alt="Empty Wine Glass">
+    
+            <!-- This is the wine fill -->
+        <div class="wine-fill"></div>
+    </div>
+    
+    
+    <div class="gauge">
+        <h2>Quality Prediction out of 10</h2>
+        <div class="gauge__body">
+          <div class="gauge__fill"></div>
+          <div class="gauge__cover"></div>
+        </div>
+      </div>
+      <div class="result-block">
+        
+        <p class="number">{{ quality }}</p> <!-- Display the predicted quality -->
+    </div>
+    <div class="result-color-block">
+        
+        <p class="color_wine">{{ color }}</p> <!-- Display the predicted quality -->
+    </div>
+    <div class="result-block_taste">
+        <h2>Taste Prediction</h2>
+        <p class="taste_text">{{ taste }}</p> <!-- Display the predicted taste -->
+    </div>
+    
+     <!-- HTML Table to display form data -->
+     
+
+    <footer class="footer">
+        <p>© 2024 Wine Genius Guide</p>
+    </footer>
+<script>
+    const gaugeElement = document.querySelector(".gauge");
+    const qualityElement = document.querySelector('.number');
+    const wineFill = document.querySelector('.wine-fill');
+    const colorElement = document.querySelector('.color_wine');
+    const new_color = colorElement.textContent.trim(); // Get the hex value from the text content and trim any extra spaces
+
+    const quality = parseInt(qualityElement.textContent, 10);
+    const new_quality=quality/10;
+    const fillLevel = 25;
+    function setGaugeValue(gauge, value) {
+        if (value < 0 || value > 1) {
+            return;
+        }
+        gauge.querySelector(".gauge__fill").style.transform = `rotate(${value / 2}turn)`;
+        gauge.querySelector(".gauge__cover").textContent = `${(value * 10)}`;
+        
+
+        // gauge.querySelector(".gauge__cover").textContent = `${Math.round(value * 100)}%`;
+    }
+    setGaugeValue(gaugeElement, new_quality);
+    
+
+    // gauge.querySelector(".gauge__cover").textContent = `quality`;
+    // Set the height of the fill area based on the given level
+    wineFill.style.height = fillLevel + '%';
+    wineFill.style.backgroundColor = new_color; // Example wine color with transparency
+  
+</script>
+</body>
+</html>
+
+  

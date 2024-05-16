@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Sommelier</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <!-- style css -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+      <!-- fevicon -->
+      <link rel="icon" href="{{ url_for('static', filename='images1/fevicon.png') }}" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.mCustomScrollbar.min.css') }}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="{{ url_for('static', filename='images1/loading.gif') }}" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div  id='HomeSection' class="head_top">
+            <div class="header">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                           <div class="center-desk">
+                              <div class="logo">
+                                 <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images1/logo.png') }}" alt="#" /></a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                           <span class="navbar-toggler-icon"></span>
+                           </button>
+                           <div class="collapse navbar-collapse" id="navbarsExample04">
+                              <ul class="navbar-nav mr-auto">
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="{{ url_for('contact') }}">A Verolt Product</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a href="{{ url_for('static', filename='nav-link') }}"><img class="verolt_logo" src="{{ url_for('static', filename='images1/verolt_logo-removebg-preview.png') }}" alt="#" /></a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- end header inner -->
+            <!-- end header -->
+            <!-- banner -->
+            <section class="banner_main">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-10 offset-md-1">
+                        <div class="text-img">
+                           <figure><img src="{{ url_for('static', filename='images1/box_img.png') }}" alt="#"/></figure>
+                        </div>
+                     </div>
+                     <div class="col-md-12">
+                        <div class="text-bg">
+                           <h1>Spent the best time with best quality wine</h1>
+                           <a href="#HowitworksSection">What Data should I have?</a>
+                        </div>
+                     </div>
+                     
+                  </div>
+               </div>
+            </section>
+         </div>
+      </header>
+      <!-- end banner -->
+      <!-- store -->
+      <div class="store">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div  id='HowitworksSection' class="titlepage">
+                     <h2>The Wine <span class="red">Genius</span> </h2>
+                     <p>Deciphering Wine's Essence: A Deep Dive into Sulphates, Chlorides, Residual Sugar, and More - Unveiling the Intricacies Behind Every Sip.</p>
+                  </div>
+               </div>
+            </div>
+            <div  class="row">
+               <div class="col-md-12">
+                  <div class="black_bg">
+            <div class="row d_flex">
+               <div class="col-md-4">
+                        <div class="store_box ">
+                           <figure><img src="{{ url_for('static', filename='images1/store_img1.png') }}" alt="#"/></figure>
+                        </div>
+                     </div>
+                     <div   class="col-md-8">
+                        <div class="store_box ">
+                           <video width="640" height="360" controls>
+                              <source src="{{ url_for('static', filename='videos1/YouCut_20240513_232107158.mp4') }}" type="video/mp4">
+                              Your browser does not support the video tag.
+                            </video>
+                          
+                           <h3>Fixed acidity </h3>
+                           <p>The non-volatile acids in wine, contributing to its tartness.
+                              To determine the fixed acidity of wine, you typically use a method called titration.
+                           </p>
+                           <h3>Volatile acidity </h3>
+                           <p>The volatile acids in wine, responsible for undesirable vinegar-like flavors.
+                              Gas chromatography is a more sophisticated technique that separates and quantifies individual volatile compounds present in the wine.
+                           </p>
+                           <h3>Citric acid</h3>
+                           <p>Naturally occurring acid in wine, influencing its freshness and tartness.
+                              Standardized sodium hydroxide (NaOH) solution as the titrant, and an appropriate indicator.
+                           </p>
+                           <a class="read_more" href="#" onclick="redirectToLink()">Read more</a>
+                        </div>
+                     
+                     </div>
+                  </div>
+               </div>
+                <div class="black_bg">
+            <div class="row d_flex">
+               <div class="col-md-4">
+                        <div class="store_box ">
+                           <figure><img src="{{ url_for('static', filename='images1/store_img2.png') }}" alt="#"/></figure>
+                        </div>
+                     </div>
+                     <div class="col-md-8">
+                        <div class="store_box ">
+                       
+                           <h3>Residual sugar </h3>
+                           <p>Remaining sugar in the wine after fermentation, affecting sweetness. It might be on the back of the bottle or methods like Chromatographic methods like high-performance liquid chromatography (HPLC) can also be used to measure residual sugar in wine.
+                           </p>
+                           <h3>Chlorides </h3>
+                           <p>Concentration of salts in the wine, influencing taste and mouthfeel.
+                              Can be determined a simple titration method using a silver nitrate (AgNO3) solution as the titrant.
+                           </p>
+                           <h3>Free sulfur dioxide </h3>
+                           <p>Presence of sulfur dioxide in its unbound form, acting as a preservative and antimicrobial agent. 
+                              Determining free sulfur dioxide (SO2) in wine typically involves a method called the Ripper titration.
+                           </p>
+                           <h3>Total sulfur dioxide </h3>
+                           <p>Total amount of sulfur dioxide present in the wine, including both free and bound forms. 
+                              The total SO2 content is commonly determined by the Ripper titration method for free SO2 and then by subtracting the free SO2 from the total SO2 content.
+                           </p>
+                           <!--<a class="read_more" href="#">Read more</a>-->
+                        </div>
+                     
+                     </div>
+                  </div>
+               </div>
+                <div class="black_bg">
+            <div class="row d_flex">
+               <div class="col-md-4">
+                        <div class="store_box ">
+                           <figure><img src="{{ url_for('static', filename='images1/store_img3.png') }}" alt="#"/></figure>
+                        </div>
+                     </div>
+                     <div class="col-md-8">
+                        <div class="store_box ">
+                          
+                           <h3>Density </h3>
+                           <p>Mass per unit volume of the wine, influenced by sugar and alcohol content.
+                              Use a hydrometer or a densitometer.
+                           </p>
+                           <h3>pH</h3>
+                           <p>Measurement of the wine's acidity levels.Determining the pH of wine involves using a pH meter or pH indicator strips</p>
+                           <h3>Sulphates</h3>
+                           <p>Presence of sulfur-containing compounds, affecting wine aroma and preservation. To determine this use Ripper titration.
+                           </p>
+                           <h3>Alcohol</h3>
+                           <p>Percentage of alcohol by volume in the wine, influencing its body and perceived warmth. It is mentioned on the back of the bottle</p>
+                           <!--<a class="read_more" href="#">Read more</a>-->
+                        </div>
+                     
+                     </div>
+                  </div>
+               </div>
+            </div>
+                 
+            </div>
+         </div>
+      </div>
+      <!-- end store -->
+      <!-- about -->
+      <div class="about">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Wine's pH<span class="red"> and it's Colour</span></h2>
+                  </div>
+               </div>
+            </div>
+         
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="about_box ">
+                           <p>Red wines with higher acidity are more likely to be a bright ruby color, as the lower pH gives them a red hue. Higher pH, less-acidic red wines can take on a blue or purple hue. Wines with lower acidity can also take on a brown color because they’re more prone to oxidation.</p>
+                           <a class="read_more" href="#" onclick="redirectToLink2()">Read More</a>
+                        </div>
+                    
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end about -->
+      <!-- Testimonial -->
+          <div id="" class="Testimonial">
+              <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="titlepage">
+                        <h2>All about Wine</h2>
+                        <span>Embrace the symphony of wine hues, where crimson cascades evoke passion, amber tones reminisce of sun-kissed vineyards, and velvety purples paint dreams of indulgent evenings.</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="myCarousel" class="carousel slide Testimonial_carousel" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="carousel-caption">
+                <div class="row d_flex">
+                  <div class="col-md-3">
+                     <div class="Testimonial_box">
+                        <i><img src="{{ url_for('static', filename='images1/winehue.jpg') }}" alt="#"/></i>
+                     </div>
+                  </div>
+                  <div class="col-md-9">
+                     <div class="Testimonial_box">
+                        <h4>Wine Hue's</h4>
+                        <p>If you look at a red wine under natural lighting conditions and over a white background, you’ll get a pretty accurate impression of its hue. It might be difficult to see at first, but young red wines (under 5 years) range in hue from red, to violet, to blue. You can see this hue by looking towards the edge of the wine as it hits the glass.</p>
+                        
+                     </div>
+                  </div>
+               </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="carousel-caption">
+               <div class="row d_flex">
+                  <div class="col-md-3">
+                     <div class="Testimonial_box">
+                        <i><img src="{{ url_for('static', filename='images1/shadecard.jpg') }}" alt="#"/></i>
+                     </div>
+                  </div>
+                  <div class="col-md-9">
+                     <div class="Testimonial_box">
+                        <h4>What do they indicate?</h4>
+                        <p>Wines with more red colored hue have a lower pH (high acidity).
+                           Wines with a violet colored hue range from around 3.4–3.6 pH (on average).
+                           Wines with a more blueish tint (almost like magenta) are over 3.6 pH and possibly closer to 4 (low acidity).</p>
+                        
+                     </div>
+                  </div>
+               </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="carousel-caption">
+               <div class="row d_flex">
+                  <div class="col-md-3">
+                     <div class="Testimonial_box">
+                        <i><img src="{{ url_for('static', filename='images1/grapes.webp') }}" alt="#"/></i>
+                     </div>
+                  </div>
+                  <div class="col-md-9">
+                     <div class="Testimonial_box">
+                        <h4>Grape variety vs Wine?</h4>
+                        <p>The grape variety chosen for winemaking profoundly impacts the resulting wine's character. Each grape brings its own unique set of attributes, including aroma, flavor, acidity, and tannin levels. For instance, Cabernet Sauvignon is renowned for its bold blackcurrant and cedar notes, while Chardonnay exhibits crisp apple and citrus flavors. These inherent qualities, coupled with factors like terroir and winemaking techniques, collectively shape the wine's profile and distinguish it from others. Thus, the selection of grape variety serves as a crucial decision for winemakers, influencing every aspect of the final product's taste, texture, and aging potential.</p>
+                     </div>
+                  </div>
+               </div></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+         <i class="fa fa-long-arrow-left" aria-hidden="true"></i> 
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      </div>
+     
+      <!-- end Testimonial -->
+      <!-- talk -->
+      <div id="talk" class="talk">
+         <div class="container">
+            <div class="row ">
+               <div class="col-md-6 ">
+                  <div  id='ContactSection' class="wines">
+                     <h3>About Us</h3>
+                     <h2 >The Roots Of “Verolt”
+                        Where Truth Meets Strength!
+                        Let’s talk for wines</h2>
+                     <p >For questions regarding our services, including inquiries about the wine quality detection process, available analysis options, or sample submission procedures, please don't hesitate to reach out to us.</p>
+                     <!--<h3>Free Multipurpose <br>
+                        Responsive Landing Page 2019</h3>-->
+                  </div>
+               </div>
+               <div class="col-md-6 ">
+                  <form class="main_form ">
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <input class="form_contril" placeholder="Name " type="text" name="Name ">
+                        </div>
+                        <div class="col-md-12">
+                           <input class="form_contril" placeholder="Phone Number" type="text" name=" Phone Number">
+                        </div>
+                        <div class="col-md-12">
+                           <input class="form_contril" placeholder="Email" type="text" name="Email">
+                        </div>
+                        <div class="col-md-12">
+                           <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
+                        </div>
+                        <div class="col-sm-12">
+                           <button class="send_btn">Send</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end talk -->
+      <!--  footer -->
+            <footer>
+         <div class="footer">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>Copyright 2019 All Right Reserved By <a href="https://html.design/"> Free  html Templates</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/jquery-3.0.0.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/plugin.js') }}"></script>
+      <!-- sidebar -->
+      <script src="{{ url_for('static', filename='js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
+<script>
+   function scrollToHowitworks() {
+       // Get a reference to the target section
+       var HowitworksSection = document.getElementById('HowitworksSection');
+
+       // Scroll to the target section
+       HowitworksSection.scrollIntoView({ behavior: 'smooth' });
+
+   }
+   function scrollToContact() {
+       // Get a reference to the target section
+       var ContactSection = document.getElementById('ContactSection');
+
+       // Scroll to the Contact section
+       ContactSection.scrollIntoView({ behavior: 'smooth' });
+
+   }
+   function scrollToHome() {
+       // Get a reference to the target section
+       var HomeSection = document.getElementById('HomeSection');
+
+       // Scroll to the Contact section
+       HomeSection.scrollIntoView({ behavior: 'smooth' });
+
+   }
+     
+
+   function redirectToLink() {
+        // Redirect to the specified URL
+        window.location.href = "https://sinatech.info/en/acetic-volatile-acidity-in-wine-cider-vinegars-and-juices/";
+    }
+    function redirectToLink2(){
+         window.location.href = "https://www.wineenthusiast.com/basics/advanced-studies/what-is-acidity-in-wine/";
+    }
+</script>
